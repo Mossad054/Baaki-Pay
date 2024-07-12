@@ -1,0 +1,24 @@
+<form method="POST" action="{{ url_for('register_customer_route') }}">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username.label }}<br>
+        {{ form.username(size=32) }}
+    </p>
+    <p>
+        {{ form.email.label }}<br>
+        {{ form.email(size=64) }}
+    </p>
+    <p>
+        {{ form.password.label }}<br>
+        {{ form.password(size=32) }}
+    </p>
+    <p>
+        {{ form.password2.label }}<br>
+        {{ form.password2(size=32) }}
+    </p>
+    <p>
+        {{ form.address.label }}<br>
+        {{ form.address(size=64) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>

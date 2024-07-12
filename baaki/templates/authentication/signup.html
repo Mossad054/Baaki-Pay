@@ -1,47 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Signup Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
 </head>
 <body>
-
-  <header id="header1" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="logo">
-        <h1><a href="/">Back Home</a></h1>
-      </div>
-    </div>
-  </header>
-
-  <main id="main"> 
-    <section class="section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2 style="color:#1b8175;">Registration Form</h2>
-          </div>
-          <div class="col-md-6" style="margin-right:0px;" data-aos="fade-up">
-            <a href="/"><h2 style="color:#1b8175;">Back Home</h2></a>
-          </div>
-        </div>
-        <div class="row">         
-          <div class="col-md-10 mb-5 mb-md-0" data-aos="fade-up">
-            <form method="POST" action="/signup">
-              <div class="input-group">
-                <input type="text" name="username" class="input--style-2 form-control" placeholder="Username" required>
-              </div>
-              <div class="input-group">
-                <input type="email" name="email" class="input--style-2 form-control" placeholder="Email" required>
-              </div>
-              <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
+    <h1>Sign Up</h1>
+    <form action="{{ url_for('signup') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <button type="submit">Sign Up</button>
+    </form>
 </body>
 </html>
